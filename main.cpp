@@ -1,12 +1,12 @@
 #include <QtWidgets/QApplication>
-#include "FenCodeGenere.h"
-#include "FenPrincipale.h"
 #include <QDialog>
+#include "fil_generator.h"
 
 int main(int argc,char *argv[]){
     QApplication app(argc,argv);
-    FenPrincipale fenetre;
+    fil_generator fenetre;
     fenetre.show();
     return app.exec();
 
 }
+
