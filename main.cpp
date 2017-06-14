@@ -1,12 +1,9 @@
 #include <QtWidgets/QApplication>
 #include <QDialog>
-#include "fil_generator.h"
-
+#include "mestand_gen.h"
 int main(int argc,char *argv[]){
-    QApplication app(argc,argv);
-    fil_generator fenetre;
-    fenetre.show();
-    return app.exec();
-
+QApplication app(argc,argv);
+mestand_gen fenetre;
+fenetre.show();
+return app.exec();
 }
-
