@@ -1,0 +1,86 @@
+QFile base_mestand("base_mestand.txt);
+QString base;
+if (base_mestand.open(QIODevice::ReadOnly |QIODevice::Text)){
+	QTextStream flux(&base_mestand);
+	while(!flux.atEnd()){
+		base=fichier.readLine()+"\n";
+	}
+	base.resize(code.size()-1);//elimine le '\n' en trop
+	base_mestand.close;
+}
+
+
+
+standard french message file / fichier messages francais standard             I
+mestandfr.fil                                                                 I
+VERSION : 00.00 : 21/06/03 : edition originale                                I
+
+/*fichier base_mestand pour construire les lignes à rajouter dans le txt-------	
+001 DATE                    :                                               A25
+003 HEURE                   :                                               A25
+005 NOM OPERATEUR           :                                               A25
+007 NOM DU PROGRAMME        :                                               A25
+009 REFERENCE DU PROGRAMME  :                                               A25
+011 CONDITION DE TEST       :                                               A25
+013 NOM DE L'UST            :                                               A25
+015 REFERENCE DE L'UST      :                                               A25
+017 NUMERO DE SERIE         :                                               A25
+019 REF UST :                                                               A09
+021 REF PROGRAMME :                                                         A15
+023 N SERIE UST :                                                           A13
+025 N SERIE BANC :                                                          A14
+027 N LOT :                                                                 A09
+029 ENVIRONNEMENT :                                                         A15
+031 TAUX PRELEVEMENT :                                                      A18
+032 N PASSAGE :                                                             A13
+033 RESULTATS :                                                             A11
+035 CHAPITRE NUMERO                                                         A16
+036 TYPE D'ESSAI            :                                               A25
+037 ESSAI                   :                                               A25
+039 BANC                    :                                               A25
+041 COMMENTAIRES :                                                          A14
+043 TEST                                                                    A04
+045 NOM                                                                     A04
+047 RESULTATS                                                               A09
+049 TOLERANCES                                                              A10
+050 VERDICT                                                                 A08
+051 FIN DU BLOC                                                             A12
+053 OUI                                                                     A03
+055 NON                                                                     A03
+057 ENTRER:                                                                 A07
+059 O                                                                       A01
+061 N                                                                       A01
+063 VOULEZ-VOUS CONTINUER ?                                                 A23
+065 ET CLIQUEZ SUR VALIDER.                                                 A23
+067 SEULES LES TOUCHES <O> ET                                               A25
+068 <N> SONT ACCEPTEES                                                      A25
+073      ELEMENT(S) INCRIMINE(S)  - TEST NUMERO :                           A50
+075 DESIGNATION      *         NAM          *      REPERE TOPOGRAPHIQUE     A67
+077             DESIGNATION            *               NAM                  A67
+079 UST EN DEFAUT                                                           A13
+080 AUTOTEST EN DEFAUT                                                      A18
+081 UST  CORRECTE                                                           A13
+082 AUTOTEST  CORRECT                                                       A18
+083 FIN DU TEST                                                             A11
+085 DUREE DU TEST                   :                                       A34
+087 NOMBRE DE TESTS HORS TOLERANCES :                                       A34
+089 NOMBRE DE TESTS EFFECTUES       :                                       A34
+091 LISTE DES TESTS HORS TOLERANCES :                                       A34
+093 TEST HORS TOLERANCES            :                                       A34
+094 COMMENTAIRES :                                                          A14
+097 **************************************************                      A50
+098                 Erreur de Syntaxe                                       A50
+099 Entrez le chiffre  1 ou 2                                               A50
+100         Appuyez sur 1, pour l'execution                                 A50
+102 Nota :  Si vous souhaitez derouler un test complet                      A50
+103         sans diagnostic, Appuyez sur 2                                  A50
+106 Nota :  Si vous souhaitez derouler un Autotest                          A50
+107         partiel, Appuyez sur 2                                          A50
+110 ENTREZ LE NUMERO DE LOT / 5 caracteres max                              A68
+111 ENTREZ LE TAUX DE PRELEVEMENT EN % / 5 caracteres max                   A68
+999 
+-------------------------------------------------------------------------------
+Evolutions
+-------------------------------------------------------------------------------
+
+-----------------------------------------------------------------------------*/
