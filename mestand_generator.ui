@@ -1,32 +1,179 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
  <class>mestand_generator</class>
- <widget class="QMainWindow" name="mestand_generator">
+ <widget class="QDialog" name="mestand_generator">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>863</width>
+    <height>554</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Dialog</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <layout class="QHBoxLayout" name="horizontalLayout"/>
-  </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Entête</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QGroupBox" name="file_langage">
+        <property name="title">
+         <string>Langue</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <widget class="QRadioButton" name="french_langage">
+           <property name="text">
+            <string>Français</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QRadioButton" name="english_langage">
+           <property name="text">
+            <string>Anglais</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="file_version">
+        <property name="title">
+         <string>Version</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_3">
+         <item>
+          <widget class="QLineEdit" name="file_version_edit"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="file_date">
+        <property name="title">
+         <string>Date</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QDateEdit" name="file_date_edit"/>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="generate_button">
+        <property name="text">
+         <string>Générer fichier fil</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_5">
+     <property name="title">
+      <string>Aperçu du fichier :</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <widget class="QPlainTextEdit" name="file_apercu">
+        <property name="minimumSize">
+         <size>
+          <width>400</width>
+          <height>0</height>
+         </size>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOn</enum>
+        </property>
+        <property name="horizontalScrollBarPolicy">
+         <enum>Qt::ScrollBarAlwaysOn</enum>
+        </property>
+        <property name="sizeAdjustPolicy">
+         <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+        </property>
+        <property name="plainText">
+         <string>001 DATE : 								A25
+003 HEURE : 								A25
+005 NOM OPERATEUR : 							A25
+007 NOM DU PROGRAMME : 							A25
+009 REFERENCE DU PROGRAMME : 						A25
+011 CONDITION DE TEST : 						A25
+013 NOM DE L'UST : 							A25
+015 REFERENCE DE L'UST : 						A25
+017 NUMERO DE SERIE : 							A25
+019 REF UST : 								A09
+021 REF PROGRAMME : 							A15
+023 N SERIE UST : 							A13
+025 N SERIE BANC : 							A14
+027 N LOT : 								A09
+029 ENVIRONNEMENT : 							A15
+031 TAUX PRELEVEMENT : 							A18
+032 N PASSAGE : 							A13
+033 RESULTATS : 							A11
+035 CHAPITRE NUMERO 							A16
+036 TYPE D'ESSAI : 							A25
+037 ESSAI : 								A25
+039 BANC : 								A25
+041 COMMENTAIRES : 							A14
+043 TEST 								A04
+045 NOM 								A04
+047 RESULTATS 								A09
+049 TOLERANCES 								A10
+050 VERDICT 								A08
+051 FIN DU BLOC 							A12
+053 OUI 								A03
+055 NON 								A03
+057 ENTRER: 								A07
+059 O 									A01
+061 N 									A01
+063 VOULEZ-VOUS CONTINUER ? 						A23
+065 ET CLIQUEZ SUR VALIDER. 						A23
+067 SEULES LES TOUCHES &lt;O&gt; ET 						A25
+068 &lt;N&gt; SONT ACCEPTEES 							A25
+073 ELEMENT(S) INCRIMINE(S) - TEST NUMERO : 				A50
+075 DESIGNATION * NAM * REPERE TOPOGRAPHIQUE 				A67
+077 DESIGNATION * NAM 							A67
+079 UST EN DEFAUT 							A13
+080 AUTOTEST EN DEFAUT 							A18
+081 UST CORRECTE 							A13
+082 AUTOTEST CORRECT 							A18
+083 FIN DU TEST 							A11
+085 DUREE DU TEST : 							A34
+087 NOMBRE DE TESTS HORS TOLERANCES : 					A34
+089 NOMBRE DE TESTS EFFECTUES : 					A34
+091 LISTE DES TESTS HORS TOLERANCES : 					A34
+093 TEST HORS TOLERANCES : 						A34
+094 COMMENTAIRES : 							A14
+097 ************************************************** 			A50
+098 Erreur de Syntaxe 							A50
+099 Entrez le chiffre 1 ou 2 						A50
+100 Appuyez sur 1, pour l'execution 					A50
+102 Nota : Si vous souhaitez derouler un test complet 			A50
+103 sans diagnostic, Appuyez sur 2 					A50
+106 Nota : Si vous souhaitez derouler un Autotest 			A50
+107 partiel, Appuyez sur 2 						A50
+110 ENTREZ LE NUMERO DE LOT / 5 caracteres max 				A68
+111 ENTREZ LE TAUX DE PRELEVEMENT EN % / 5 caracteres max 		A68
+999
+-------------------------------------------------------------------------------
+Evolutions
+-------------------------------------------------------------------------------</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

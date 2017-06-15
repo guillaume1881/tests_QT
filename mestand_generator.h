@@ -1,13 +1,13 @@
 #ifndef MESTAND_GENERATOR_H
 #define MESTAND_GENERATOR_H
 
-#include <QMainWindow>
+#include <QDialog>
 
 namespace Ui {
 class mestand_generator;
 }
 
-class mestand_generator : public QMainWindow
+class mestand_generator : public QDialog
 {
     Q_OBJECT
 
@@ -17,6 +17,10 @@ public:
 
 private:
     Ui::mestand_generator *ui;
+    void mestand_write(QString code,QString name);
+
+    private slots :
+        void mestand_generate();
 };
 
 #endif // MESTAND_GENERATOR_H
