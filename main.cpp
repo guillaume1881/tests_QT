@@ -1,12 +1,13 @@
 
 #include <QtWidgets/QApplication>
 #include <QDialog>
-#include "mes_generator.h"
+#include "tol_generator.h"
 
 int main(int argc,char *argv[]){
 QApplication app(argc,argv);
-mes_generator fenetre;
+tol_generator fenetre;
 fenetre.show();
 return app.exec();
 }
+
 
